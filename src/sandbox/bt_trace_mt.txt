@@ -1,0 +1,129 @@
+@end_to_end_avg: 10308649
+
+@end_to_end_hist: 
+[8M, 16M)           5981 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[16M, 32M)             1 |                                                    |
+
+@end_to_end_max: 19341799
+@end_to_end_min: 10119594
+
+@hiping_avg[19929, ping_pong]: 10111322
+@hiping_avg[19928, ping_pong]: 10112406
+@hiping_avg[19930, ping_pong]: 10113946
+
+@hipong_avg[19929, ping_pong]: 14998
+@hipong_avg[19930, ping_pong]: 15005
+@hipong_avg[19928, ping_pong]: 15107
+
+@loping_avg[19929, ping_pong]: 10129475
+@loping_avg[19930, ping_pong]: 10133888
+@loping_avg[19928, ping_pong]: 10136255
+
+@lopong_avg[19928, ping_pong]: 11528
+@lopong_avg[19929, ping_pong]: 11556
+@lopong_avg[19930, ping_pong]: 11617
+
+@timer_avg[19929, ping_pong]: 43415
+@timer_avg[19930, ping_pong]: 43815
+@timer_avg[19928, ping_pong]: 43975
+
+
+@state[19929]: 0
+@state[19930]: 0
+@state[19928]: 0
+@time_in_state[4]: 6630
+@time_in_state[5]: 12891
+@time_in_state[1]: 40642
+@time_in_state[0]: 5262686
+@time_in_state[2]: 10034868
+@time_in_state[3]: 10041598
+@time_in_state_by_thread[19919, 0]: 341824307223868
+@time_in_state_by_thread[19926, 0]: 341824309172805
+@time_in_state_by_thread[19922, 0]: 341824310290095
+@time_in_state_by_thread[19925, 0]: 683648618281828
+@time_in_state_by_thread[19928, 5]: 9560745542969985
+@time_in_state_by_thread[19929, 5]: 10586538389472162
+@time_in_state_by_thread[19930, 5]: 12979261978139870
+@time_in_state_by_thread[19927, 0]: 15040269562853490
+@time_in_state_by_thread[19929, 1]: 15712033429890285
+@time_in_state_by_thread[19920, 0]: 15723918190757177
+@time_in_state_by_thread[19918, 0]: 18458512658821182
+@time_in_state_by_thread[19930, 4]: 18782327846003359
+@time_in_state_by_thread[19929, 4]: 19465377114916715
+@time_in_state_by_thread[19928, 4]: 19465860127251387
+@time_in_state_by_thread[19930, 1]: 19812433643928351
+@time_in_state_by_thread[19928, 1]: 20498201302260901
+@time_in_state_by_thread[19924, 0]: 25614806218600517
+@time_in_state_by_thread[19921, 0]: 25956454627454558
+@time_in_state_by_thread[19923, 0]: 58065325282815225
+@time_in_state_by_thread[19930, 0]: 5949689469092885155
+@time_in_state_by_thread[19928, 0]: 5953475595865858699
+@time_in_state_by_thread[19929, 0]: 5960992079413617418
+@time_in_state_by_thread[19928, 3]: 6198307400186453043
+@time_in_state_by_thread[19929, 2]: 6412110006486211651
+@time_in_state_by_thread[19930, 2]: 6594502249298207141
+@time_in_state_by_thread[19928, 2]: 6872313119281018209
+@time_in_state_by_thread[19929, 3]: 7457747685855676930
+@time_in_state_by_thread[19930, 3]: 8066214030486716835
+@time_per_state_avg[5]: 9689
+@time_per_state_avg[4]: 12730
+@time_per_state_avg[1]: 41494
+@time_per_state_avg[0]: 478206
+@time_per_state_avg[3]: 10045764
+@time_per_state_avg[2]: 10051591
+
+Overhead per period
+[250us, 300us)      19 |                                                    |
+[300us, 350us)     159 |@@@@                                                |
+[350us, 400us)     565 |@@@@@@@@@@@@@@@@                                    |
+[400us, 450us)    1254 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                 |
+[450us, 500us)    1825 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[500us, 550us)    1348 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@              |
+[550us, 600us)     563 |@@@@@@@@@@@@@@@@                                    |
+[600us, 650us)     177 |@@@@@                                               |
+[650us, 700us)      58 |@                                                   |
+[700us, 750us)       8 |                                                    |
+[750us, 800us)       6 |                                                    |
+
+Time in timer callback per period 
+[0, 50us)         5438 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[50us, 100us)      541 |@@@@@                                               |
+[100us, 150us)       1 |                                                    |
+[150us, 200us)       1 |                                                    |
+[200us, 250us)       0 |                                                    |
+[250us, 300us)       1 |                                                    |
+
+Time in hiping callback per period 
+[ 9850us,  9900us)       1 |                                                    |
+[ 9900us,  9950us)       0 |                                                    |
+[ 9950us, 10000us)      10 |                                                    |
+[10000us, 10050us)    2850 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    |
+[10050us, 10100us)    3085 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[10100us, 10150us)      36 |                                                    |
+
+Time in loping callback per period  
+[ 9950us, 10000us)       3 |                                                    |
+[10000us, 10050us)    3862 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[10050us, 10100us)    2086 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@                        |
+[10100us, 10150us)      30 |                                                    |
+[10150us, 10200us)       1 |                                                    |
+
+Time in hipong callback per period  
+[0, 50us)          5982 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+
+Time in lopong callback per period  
+[0, 50us)          5982 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+
+@time_per_state_max[0]: 795386
+@time_per_state_max[1]: 294743
+@time_per_state_max[2]: 10130163
+@time_per_state_max[3]: 10168247
+@time_per_state_max[4]: 39543
+@time_per_state_max[5]: 35182
+
+@time_per_state_min[0]: 252631
+@time_per_state_min[1]: 12040
+@time_per_state_min[2]: 9886091
+@time_per_state_min[3]: 9962875
+@time_per_state_min[4]: 3570
+@time_per_state_min[5]: 3391

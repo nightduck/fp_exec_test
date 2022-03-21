@@ -1,0 +1,109 @@
+@end_to_end_avg: 10369535
+
+@end_to_end_hist: 
+[8M, 16M)           5983 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[16M, 32M)             2 |                                                    |
+
+@end_to_end_max: 17525093
+@end_to_end_min: 10099851
+
+@hiping_avg[27922, ping_pong]: 10197149
+
+@hipong_avg[27921, ping_pong]: 12901
+
+@loping_avg[27923, ping_pong]: 10185408
+
+@lopong_avg[27921, ping_pong]: 10032
+
+@timer_avg[27921, ping_pong]: 47826
+
+
+@state[27922]: 0
+@state[27921]: 0
+@state[27923]: 0
+@time_in_state[5]: 3941
+@time_in_state[4]: 7850
+@time_in_state[1]: 52193
+@time_in_state[0]: 5988347
+@time_in_state[3]: 10064417
+@time_in_state[2]: 10073198
+@time_in_state_by_thread[27919, 0]: 970
+@time_in_state_by_thread[27912, 0]: 342548329443481
+@time_in_state_by_thread[27915, 0]: 342548331535874
+@time_in_state_by_thread[27918, 0]: 342548331555835
+@time_in_state_by_thread[27921, 1]: 8898370731264536
+@time_in_state_by_thread[27921, 5]: 11291766828915226
+@time_in_state_by_thread[27911, 0]: 11646643237475495
+@time_in_state_by_thread[27913, 0]: 11646643243002522
+@time_in_state_by_thread[27920, 0]: 13016836563905585
+@time_in_state_by_thread[27921, 4]: 17111130364486750
+@time_in_state_by_thread[27914, 0]: 25326383689178427
+@time_in_state_by_thread[27917, 0]: 25668932019352828
+@time_in_state_by_thread[27916, 0]: 56818039912240377
+@time_in_state_by_thread[27923, 0]: 2050414789685436864
+@time_in_state_by_thread[27922, 0]: 2057258852245711063
+@time_in_state_by_thread[27922, 2]: 2681656568680491875
+@time_in_state_by_thread[27921, 0]: 4888332468286811520
+@time_in_state_by_thread[27924, 0]: 7512380633752633015
+@time_in_state_by_thread[27923, 3]: 17926212212922488758
+@time_per_state_avg[5]: 8227
+@time_per_state_avg[4]: 10902
+@time_per_state_avg[1]: 45853
+@time_per_state_avg[0]: 268411
+@time_per_state_avg[3]: 10050061
+@time_per_state_avg[2]: 10055462
+
+Overhead per period
+[100us, 150us)       8 |                                                    |
+[150us, 200us)     126 |@@                                                  |
+[200us, 250us)     838 |@@@@@@@@@@@@@@@@                                    |
+[250us, 300us)    2651 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[300us, 350us)    1977 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@              |
+[350us, 400us)     308 |@@@@@@                                              |
+[400us, 450us)      60 |@                                                   |
+[450us, 500us)      16 |                                                    |
+[500us, 550us)       1 |                                                    |
+
+Time in timer callback per period 
+[0, 50us)          4716 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[ 50us, 100us)     1266 |@@@@@@@@@@@@@                                       |
+[100us, 150us)        0 |                                                    |
+[150us, 200us)        2 |                                                    |
+[200us, 250us)        1 |                                                    |
+
+Time in hiping callback per period 
+[ 9850us,  9900us)       1 |                                                    |
+[ 9900us,  9950us)       1 |                                                    |
+[ 9950us, 10000us)      20 |                                                    |
+[10000us, 10050us)    2317 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                   |
+[10050us, 10100us)    3591 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[10100us, 10150us)      55 |                                                    |
+
+Time in loping callback per period  
+[ 9850us,  9900us)       1 |                                                    |
+[ 9900us,  9950us)       2 |                                                    |
+[ 9950us, 10000us)      19 |                                                    |
+[10000us, 10050us)    3268 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[10050us, 10100us)    2644 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@          |
+[10100us, 10150us)      51 |                                                    |
+
+Time in hipong callback per period  
+[0, 50us)         5984 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[50us, 100us)        1 |                                                    |
+
+Time in lopong callback per period  
+[0, 50us)          5985 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+
+@time_per_state_max[0]: 534319
+@time_per_state_max[1]: 213930
+@time_per_state_max[2]: 10142798
+@time_per_state_max[3]: 10141743
+@time_per_state_max[4]: 81754
+@time_per_state_max[5]: 34772
+
+@time_per_state_min[0]: 103966
+@time_per_state_min[1]: 16011
+@time_per_state_min[2]: 9896499
+@time_per_state_min[3]: 9870349
+@time_per_state_min[4]: 2740
+@time_per_state_min[5]: 2620
