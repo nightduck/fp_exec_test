@@ -52,12 +52,13 @@ int main(int argc, char * argv[])
   rclcpp::init(argc, argv);
 
   auto pp = [](rclcpp::AnyExecutable exec) -> int {
-    if (exec.subscription != NULL
-        && strcmp(exec.subscription->get_topic_name(), "low_ping")) {
-      return 50;
-    }
-    return 60;
-  };
+      if (exec.subscription != NULL &&
+        strcmp(exec.subscription->get_topic_name(), "low_ping"))
+      {
+        return 50;
+      }
+      return 60;
+    };
 
   // Create Ping node instance and add it to high-prio executor.
   auto ping_node = std::make_shared<PingNode>();
@@ -87,7 +88,8 @@ int main(int argc, char * argv[])
     nanoseconds thread_begin = get_thread_time(exec_thread);
     const std::chrono::seconds EXPERIMENT_DURATION = 600s;
     RCLCPP_INFO_STREAM(
-      logger, "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
+      logger,
+      "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
     std::this_thread::sleep_for(EXPERIMENT_DURATION);
 
     // Get end CPU time of each thread ...
@@ -107,7 +109,7 @@ int main(int argc, char * argv[])
       thread_end - thread_begin).count();
     RCLCPP_INFO(
       logger, "Executor thread ran for %" PRId64 "ms.", high_prio_thread_duration_ms);
-  
+
   } else if (argc >= 2 && std::string("sst").compare(argv[1]) == 0) {
     rclcpp::executors::StaticSingleThreadedExecutor exec1;
     rclcpp::executors::StaticSingleThreadedExecutor exec2;
@@ -132,7 +134,8 @@ int main(int argc, char * argv[])
     nanoseconds thread2_begin = get_thread_time(exec2_thread);
     const std::chrono::seconds EXPERIMENT_DURATION = 600s;
     RCLCPP_INFO_STREAM(
-      logger, "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
+      logger,
+      "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
     std::this_thread::sleep_for(EXPERIMENT_DURATION);
 
     // Get end CPU time of each thread ...
@@ -191,7 +194,8 @@ int main(int argc, char * argv[])
     nanoseconds thread3_begin = get_thread_time(exec3_thread);
     const std::chrono::seconds EXPERIMENT_DURATION = 600s;
     RCLCPP_INFO_STREAM(
-      logger, "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
+      logger,
+      "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
     std::this_thread::sleep_for(EXPERIMENT_DURATION);
 
     // Get end CPU time of each thread ...
@@ -241,7 +245,8 @@ int main(int argc, char * argv[])
     nanoseconds thread_begin = get_thread_time(exec_thread);
     const std::chrono::seconds EXPERIMENT_DURATION = 600s;
     RCLCPP_INFO_STREAM(
-      logger, "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
+      logger,
+      "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
     std::this_thread::sleep_for(EXPERIMENT_DURATION);
 
     // Get end CPU time of each thread ...
@@ -280,7 +285,8 @@ int main(int argc, char * argv[])
     nanoseconds thread_begin = get_thread_time(exec_thread);
     const std::chrono::seconds EXPERIMENT_DURATION = 80s;
     RCLCPP_INFO_STREAM(
-      logger, "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
+      logger,
+      "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
     std::this_thread::sleep_for(EXPERIMENT_DURATION);
 
     // Get end CPU time of each thread ...
@@ -319,7 +325,8 @@ int main(int argc, char * argv[])
     nanoseconds thread_begin = get_thread_time(exec_thread);
     const std::chrono::seconds EXPERIMENT_DURATION = 600s;
     RCLCPP_INFO_STREAM(
-      logger, "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
+      logger,
+      "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
     std::this_thread::sleep_for(EXPERIMENT_DURATION);
 
     // Get end CPU time of each thread ...
@@ -340,7 +347,7 @@ int main(int argc, char * argv[])
       thread_end - thread_begin).count();
     RCLCPP_INFO(
       logger, "Executor thread ran for %" PRId64 "ms.", high_prio_thread_duration_ms);
-  
+
   }
   return 0;
 }
