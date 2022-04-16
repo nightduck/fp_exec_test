@@ -20,6 +20,8 @@ RUN ln -fs /usr/share/zoneinfo/UTC /etc/localtime \
   && dpkg-reconfigure --frontend noninteractive tzdata \
   && rm -rf /var/lib/apt/lists/*
 
+ENV ROS_DISTRO=rolling
+
 # Install ROS2
 RUN apt-get update && apt-get install -y \
     curl \
@@ -29,16 +31,15 @@ RUN apt-get update && apt-get install -y \
   && curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg \
   && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null \
   && apt-get update && apt-get install -y \
-    ros-rolling-ros-base \
+    ros-$ROS_DISTRO-ros-base \
     python3-argcomplete \
   && rm -rf /var/lib/apt/lists/*
 
-ENV ROS_DISTRO=rolling
-ENV AMENT_PREFIX_PATH=/opt/ros/rolling
-ENV COLCON_PREFIX_PATH=/opt/ros/rolling
-ENV LD_LIBRARY_PATH=/opt/ros/rolling/lib
-ENV PATH=/opt/ros/rolling/bin:$PATH
-ENV PYTHONPATH=/opt/ros/rolling/lib/python3.8/site-packages
+ENV AMENT_PREFIX_PATH=/opt/ros/$ROS_DISTRO
+ENV COLCON_PREFIX_PATH=/opt/ros/$ROS_DISTRO
+ENV LD_LIBRARY_PATH=/opt/ros/$ROS_DISTRO/lib
+ENV PATH=/opt/ros/$ROS_DISTRO/bin:$PATH
+ENV PYTHONPATH=/opt/ros/$ROS_DISTRO/lib/python3.8/site-packages
 ENV ROS_PYTHON_VERSION=3
 ENV ROS_VERSION=2
 ENV DEBIAN_FRONTEND=
@@ -64,17 +65,23 @@ RUN apt-get update && apt-get install -y \
   vim \
   wget \
   # Install ros distro testing packages
-  ros-rolling-ament-lint \
-  ros-rolling-ament-cmake-google-benchmark \
-  ros-rolling-launch-testing \
-  ros-rolling-launch-testing-ament-cmake \
-  ros-rolling-launch-testing-ros \
-  ros-rolling-mimick-vendor \
-  ros-rolling-performance-test-fixture \
-  ros-rolling-test-msgs \
+  ros-$ROS_DISTRO-ament-lint \
+  ros-$ROS_DISTRO-ament-cmake-mypy \
+  ros-$ROS_DISTRO-ament-cmake-google-benchmark \
+  ros-$ROS_DISTRO-ament-mypy \
+  ros-$ROS_DISTRO-launch-testing \
+  ros-$ROS_DISTRO-launch-testing-ament-cmake \
+  ros-$ROS_DISTRO-launch-testing-ros \
+  ros-$ROS_DISTRO-mimick-vendor \
+  ros-$ROS_DISTRO-performance-test-fixture \
+  ros-$ROS_DISTRO-ros-testing \
+  ros-$ROS_DISTRO-test-msgs \
+  ros-$ROS_DISTRO-tracetools-analysis \
   python3-autopep8 \
   && rm -rf /var/lib/apt/lists/* \
   && rosdep init || echo "rosdep already initialized"
+
+RUN python3 -m pip install psrecord bokeh networkx numpy pandas
 
 ARG WORKSPACE
 ARG USERNAME=ros
