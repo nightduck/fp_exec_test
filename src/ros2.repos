@@ -10,8 +10,8 @@ repositories:
   #   version: main
   reference-system-autoware:
     type: git
-    url: https://github.com/ros-realtime/reference-system.git
-    version: main
+    url: https://github.com/nightduck/reference-system.git
+    version: fp_exec
   ros2/ros2_tracing:
     type: git
     url: https://gitlab.com/ros-tracing/ros2_tracing.git
