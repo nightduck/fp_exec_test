@@ -1,9 +1,8 @@
-# repositories:
+repositories:
 #   ros2/rclcpp:
 #     type: git
 #     url: https://github.com/nightduck/rclcpp.git
 #     version: alt_exec
-  This repo only works on Foxy, uncomment when it supports at least galactic
   ros_edf:
     type: git
     url: https://github.com/RTIS-UCF/ros_edf.git
