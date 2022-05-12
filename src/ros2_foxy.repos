@@ -1,0 +1,18 @@
+# repositories:
+#   ros2/rclcpp:
+#     type: git
+#     url: https://github.com/nightduck/rclcpp.git
+#     version: alt_exec
+  This repo only works on Foxy, uncomment when it supports at least galactic
+  ros_edf:
+    type: git
+    url: https://github.com/RTIS-UCF/ros_edf.git
+    version: main
+  reference-system-autoware:
+    type: git
+    url: https://github.com/nightduck/reference-system.git
+    version: edf_exec
+  ros2/ros2_tracing:
+    type: git
+    url: https://gitlab.com/ros-tracing/ros2_tracing.git
+    version: foxy
